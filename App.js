@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SignIn from './Components/Signin';
+import SignUp from './Components/SignUp';
+import Dashboard from './Components/Dashboard';
+import MoodEntry from './Components/MoodEntry';
+import MoodHistory from './Components/MoodHistory';
+import Settings from './Components/Settings';
+import Support from './Components/Support';
+import { Button, TextField, Typography } from '@mui/material';
+import './App.css';
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  <Router>
+    <Container maxWidth="sm">
+      <Switch>
+        <Route path="/" exact component={SignIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/mood-entry" component={MoodEntry} />
+        <Route path="/mood-history" component={MoodHistory} />
+        <Route path="/settings" component={Settings} />
+        <Route path="/support" component={Support} />
+      </Switch>
+    </Container>
+  </Router>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
