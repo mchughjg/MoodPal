@@ -48,21 +48,37 @@ This section provides an overview of the technologies and architecture that powe
 
 ### Project Structure
 ├── assets/                 # Contains app icons and splash screens
+
 ├── Components/             # Reusable UI components and individual screen files
+
 │   ├── Dashboard.js        # Main screen for mood selection and primary navigation
+
 │   ├── MoodEntry.js        # Screen for detailed mood logging inputs
+
 │   ├── MoodHistory.js      # Displays historical mood data using charts
+
 │   ├── Settings.js         # User preferences and application settings
+
 │   ├── SignIn.js           # (Missing from uploaded files - for user login)
-│   ├── SignUp.js           # (Missing from uploaded files - for new user registration)
+
+│   ├── SignUp.js           # (Missing from uploaded files - for new user registration)\
+
 │   └── Support.js          # (Missing from uploaded files - for user support/help)
+
 ├── Images/                 # contains mood images (e.g., content.jpg)
+
 ├── Screenshots/            # contains screenshots of UI (Dashboard-Emotions, Mood Entry, Sign-In, Sign-Up, etc.)
+
 ├── App.js                  # Main application entry point, defines the overall navigation stack
+
 ├── app.json                # Expo configuration file for app metadata and build settings
+
 ├── babel.config.js         # Babel configuration for JavaScript transpilation
+
 ├── .gitignore              # Specifies files and directories to be ignored by Git
+
 ├── package.json            # Lists project dependencies and scripts
+
 └── package-lock.json       # Locks exact versions of dependencies for consistent builds
 
 ## Code and Screenshots
